@@ -11,7 +11,8 @@ steps:
   args:
   - "-c"
   - |
-    sed -i "s/\\$PROJECT_ID/$PROJECT_ID/g" gke.yaml
+    sed -i "s|\\$PROJECT_ID|$PROJECT_ID|g" gke.yaml
+    cat gke.yaml  # Print the file to verify the replacement worked
   # deploy container image to GKE
 - name: "gcr.io/cloud-builders/gke-deploy"
   args:
