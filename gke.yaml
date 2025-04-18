@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: gcp-devops-gke
-        image: gcr.io/quantum-petal-457208-d9/myfirstproject:latest
+        image: gcr.io/quantum-petal-457208-d9/myfirstproject-dev:latest
         ports:
         - containerPort: 5000
         env:
